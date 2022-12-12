@@ -1,0 +1,386 @@
+.but {
+  text-decoration: none;
+  color: black;
+  border: solid 1px #ebebeb;
+  margin-top: 6px;
+  margin-right: 5px;
+  padding-right: 5px;
+  padding-left: 7px;
+  letter-spacing: 1px;
+  font-size: 12px;
+  margin-right: 20px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  background-color: white;
+}
+
+.grid-banner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 20px;
+  margin-bottom: 50px;
+  transition: transform 2s;
+  grid-template-areas:
+    "item1 item2 item4"
+    "item1 item3 item5";
+
+  .item {
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 1px none;
+    cursor: pointer;
+    object-fit: contain;
+    box-shadow: 9px 15px 19px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 9px 15px 19px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 9px 15px 19px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 60px;
+
+    &__title a {
+      @extend .but;
+    }
+
+    &:nth-child(1) {
+      grid-area: item1;
+      min-height: 350px;
+      background-image: url("/src/room.jpeg");
+      background-size: cover;
+      color: white;
+      box-shadow: inset 0 0 0 2000px rgba(90, 84, 87, 0.3);
+      &:hover {
+        box-shadow: inset 0 0 0 2000px rgba(90, 84, 87, 0.3);
+        transform: translateY(-3px);
+        transition-timing-function: ease-in-out;
+      }
+
+      h3 {
+        font-size: 30px;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-area: item2;
+      background-image: url("/src/basketball.jpeg");
+      background-size: cover;
+      box-shadow: inset 0 0 0 2000px rgba(17, 10, 217, 0.664);
+      &:hover {
+        box-shadow: inset 0 0 0 2000px rgba(17, 10, 217, 0.664);
+        transform: translateY(-3px);
+        transition-timing-function: ease-in-out;
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: rgb(98, 199, 135);
+      grid-area: item3;
+      &:hover {
+        transform: translateY(-3px);
+        transition-timing-function: ease-in-out;
+      }
+    }
+
+    &:nth-child(4) {
+      background-color: rgb(69, 133, 189);
+      grid-area: item4;
+      &:hover {
+        transform: translateY(-3px);
+        transition-timing-function: ease-in-out;
+      }
+    }
+
+    &:nth-child(5) {
+      background-color: rgb(255, 0, 166);
+      grid-area: item5;
+      background-image: url("/src/map.jpg");
+      background-size: cover;
+      box-shadow: inset 0 0 0 2000px rgba(224, 13, 129, 0.3);
+      &:hover {
+        box-shadow: inset 0 0 0 2000px rgba(224, 13, 129, 0.3);
+        transform: translateY(-3px);
+        transition-timing-function: ease-in-out;
+      }
+    }
+  }
+}
+
+.info-banner {
+  border-radius: 10px;
+  border: solid 1px none;
+  cursor: pointer;
+  min-height: 400px;
+  width: 90%;
+  margin: auto;
+  background-image: url(/src/bed.jpeg);
+  background-size: cover;
+  background-color: #cccccc;
+  background-position: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  padding-left: 10%;
+  padding-top: 10%;
+  gap: 20px;
+  font-weight: bold;
+  box-shadow: inset 0 0 0 2000px rgba(90, 84, 87, 0.3);
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &__button a {
+    @extend .but;
+  }
+}
+
+.info-banner__content h2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: corben;
+  width: 50%;
+}
+
+.info-banner2 {
+  border-radius: 10px;
+  border: solid 1px none;
+  cursor: pointer;
+  min-height: 400px;
+  width: 90%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background: hsla(39, 60%, 57%, 0.768);
+  background-size: cover;
+  object-fit: contain;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  padding-left: 10%;
+  padding-top: 10%;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &__button a {
+    @extend .but;
+  }
+  &__message {
+    p {
+      font-family: "Mulish";
+      font-size: 19px;
+      width: 70%;
+    }
+  }
+  &__content h2 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: corben;
+    width: 50%;
+  }
+}
+
+.grid-box {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  grid-template-areas:
+    "item1 item2"
+    "item3 item4 item5";
+  margin-top: 50px;
+  height: 400px;
+
+  &__content:nth-child(1) {
+    grid-area: item1;
+  }
+  &__content:nth-child(2) {
+    grid-area: item2;
+    border: solid 1px white;
+    height: 200px;
+  }
+
+  &__content:nth-child(4) {
+    grid-area: item4;
+    border: solid 1px white;
+    height: 200px;
+  }
+  &__content:nth-child(5) {
+    grid-area: item5;
+    border: solid 1px white;
+    height: 200px;
+  }
+}
+
+.flex-box {
+  display: flex;
+  border: solid 1px none;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+  gap: 50px;
+  transition: transform 0.2s;
+
+  &__content {
+    border: solid 1px black;
+    height: 480px;
+    width: 640px;
+    padding: 10px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    padding-top: 80px;
+    a {
+      @extend .but;
+    }
+    h3 {
+      font-size: 35px;
+      font-weight: bold;
+      font-family: corben;
+      width: 50%;
+    }
+    p {
+      font-family: "Mulish";
+      font-size: 19px;
+    }
+
+    &:nth-child(1) {
+      background-image: url(/src/avi.jpg);
+      box-shadow: inset 0 0 0 2000px rgba(203, 38, 192, 0.3);
+      &:hover {
+        box-shadow: inset 0 0 0 2000px rgba(203, 38, 192, 0.3);
+        transform: translateX(-8px);
+        transition-timing-function: ease-in-out;
+      }
+    }
+    &:nth-child(2) {
+      background-image: url(/src/allec.jpg);
+      box-shadow: inset 0 0 0 2000px rgba(216, 150, 26, 0.3);
+      &:hover {
+        box-shadow: inset 0 0 0 2000px rgba(216, 150, 26, 0.3);
+        transform: translateX(5px);
+        transition-timing-function: ease;
+      }
+    }
+  }
+  &__cont {
+    border: solid 1px black;
+    height: 480px;
+    width: 640px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+.flex-box2 {
+  @extend .flex-box;
+  &__cont {
+    @extend .flex-box__content;
+
+    &:nth-child(1) {
+      background-image: url(/src/rabie.jpg);
+    }
+    &:nth-child(2) {
+      background-image: url(/src/lennart-nacke-owq9ZG_IgNc-unsplash.jpg);
+    }
+    &:nth-child(3) {
+      background-image: url(/src/mathieu-ramus-DGohMzoMBwY-unsplash.jpg);
+      box-shadow: inset 0 0 0 2000px rgba(57, 24, 177, 0.3);
+      &:hover {
+        box-shadow: inset 0 0 0 2000px rgba(216, 150, 26, 0.3);
+        transform: scale(1.1);
+        transition-timing-function: ease;
+      }
+    }
+  }
+}
+.contact__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  margin-top: 60px;
+  gap: 10px;
+
+  button {
+    height: 50px;
+    width: auto;
+    margin: 20px;
+    padding: 20px;
+    background: #e0e5ec;
+    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+      7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9,
+      inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9,
+      inset 0px 0px 0px 0px #0001;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+  }
+
+  h3 {
+    font-size: 42px;
+    line-height: 1.45;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+  }
+  &-auto {
+    display: inline-block;
+    font-family: "arial";
+    font-size: 19px;
+    P {
+      color: #fff;
+      font-family: monospace;
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: 0.15em solid orange; /* The typwriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+      letter-spacing: 0.15em; /* Adjust as needed */
+      animation: typing 5.5s steps(30, end) infinite,
+        blink-caret 0.5s step-end infinite;
+    }
+  }
+  input[type="text"] {
+    width: 30%;
+    padding: 12px 20px;
+    text-align: center;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
+    transition: all 1s;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+}
